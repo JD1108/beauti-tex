@@ -1,0 +1,35 @@
+\documentclass[<<SIZE>>]{<<CLAS>>}
+
+% PACKAGES
+\input(pak)
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{literature.bib}
+
+
+
+
+% DOCUMENT
+\begin{document}
+	
+	% Front matter
+	\input{chapters/titlepage}
+	\input{chapters/abstract}
+	\pagenumbering{gobble}
+	\tableofcontents
+	\clearpage
+	\pagenumbering{arabic}
+	
+	
+	% Main content
+	<<CHAPTERS>>
+	
+	% Literature
+	\printbibliography
+	
+	% Appendix
+	\appendix
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+	\clearpage
+	\input{chapters/appendix}
+\end{document}

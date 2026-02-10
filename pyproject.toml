@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beauti-tex"
+dynamic = ["version"]
+description = "Generating LaTeX code for nice looking documents"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name="Dunst", email="beauti-tex@je-dunst.de"}
+]
+license = {text = "Apache-2.0"}
+dependencies = [
+]
+keywords = ["latex", "tex", "documents", "pdf"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+package-dir = {"" = "src"}
+include-package-data = true
+[tool.setuptools.dynamic]
+version = {attr = "beauti_tex.__version__"}
+[tool.setuptools.package-data]
+"beauti_tex" = ["default.ini", "templates/*"]
