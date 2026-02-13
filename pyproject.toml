@@ -11,17 +11,17 @@ requires-python = ">=3.10"
 authors = [
     {name="Dunst", email="beauti-tex@je-dunst.de"}
 ]
-license = {text = "Apache-2.0"}
+license= "Apache-2.0"
 dependencies = [
 ]
 keywords = ["latex", "tex", "documents", "pdf"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent"
 ]
-
+[project.scripts]
+beauti-tex="beauti_tex.cli:main"
 [tool.setuptools]
 packages = {find = {where = ["src"]}}
 package-dir = {"" = "src"}
@@ -30,3 +30,7 @@ include-package-data = true
 version = {attr = "beauti_tex.__version__"}
 [tool.setuptools.package-data]
 "beauti_tex" = ["default.ini", "templates/*"]
+[project.urls]
+Homepage = "https://github.com/JD1108/beauti-tex"
+Repository = "https://github.com/JD1108/beauti-tex"
+Documentation = "https://github.com/JD1108/beauti-tex#readme"
